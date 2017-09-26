@@ -10,7 +10,7 @@ import BButton from '../components/Button';
 import Login from '../components/Login';
 import Register from '../components/Register';
 import ConnectBox from '../components/ConnectBox';
-
+import NavBar from '../components/NavBar';
 
 // icons
 import Beer from 'react-icons/lib/ti/beer';
@@ -27,3 +27,15 @@ storiesOf('BrestJS', module)
   .add('Login', ()=>( <Login /> ))
   .add('Register', ()=>( <Register /> ))
   .add('Connect box', ()=>( <ConnectBox /> ))
+  .add('Nav', ()=>( <NavBar /> ))
+  
+storiesOf('B Button', module)
+  .add('primary', ()=><BButton kind='primary' onClick={action('clicked')} title="Hello BrestJS" icon={Beer} />)
+  .add('secondary', ()=><BButton kind='secondary' onClick={linkTo('B Button','danger')} title="Hello BrestJS" icon={Beer} />)
+  .add('danger', ()=><BButton kind='danger' onClick={action('clicked')} title="Hello BrestJS" icon={Beer} />)
+  
+storiesOf('Connect', module)
+  .add('Login', ()=>( <Login /> ))
+  .add('Register', ()=>( <Register /> ))
+  .add('Connect box', ()=>( <ConnectBox /> ))
+  
