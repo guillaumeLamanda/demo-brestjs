@@ -20,9 +20,9 @@ class Button extends React.Component {
 
 Button.propTypes = {
     title: PropTypes.string,
-    kind: PropTypes.oneOf(['primary', 'danger']).isRequired,
+    kind: PropTypes.oneOf(['primary', 'secondary', 'danger']).isRequired,
     onClick: PropTypes.func.isRequired,
-    icon: PropTypes.element
+    icon: PropTypes.func
 }
 
 const styles = {
@@ -30,10 +30,8 @@ const styles = {
         outline:"none", 
         backgroundColor: '#003ea3',  
         color: 'white',
-        border:"1px solid #fff",  
+        border:"0px solid #fff",  
         borderRadius: 28,
-        marginBottom:10, 
-        marginTop:10, 
         height:"50px",  
         width:200,
         fontSize: 15
@@ -41,9 +39,11 @@ const styles = {
     primary: {
         backgroundColor: '#003ea3'
     },
-
     danger: {
         backgroundColor: '#FF4136'
+    },
+    secondary: {
+        backgroundColor: '#fbbd08'
     }
 }
 

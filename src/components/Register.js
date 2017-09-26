@@ -1,8 +1,9 @@
 import React from 'react';
-import {Input, Label} from 'semantic-ui-react';
-import Beer from 'react-icons/lib/ti/beer';
+import {Input} from 'semantic-ui-react';
 import { action } from '@storybook/addon-actions';
 import { Container, Divider, Grid, Header, Image } from 'semantic-ui-react'
+import Button from './Button';
+import Rocket from 'react-icons/lib/fa/rocket';
 
 export default class Login extends React.Component {
     constructor(props){
@@ -35,6 +36,9 @@ export default class Login extends React.Component {
                 </Grid.Row>
                 <Grid.Row>
                     <Input name="confirm" placeholder="confirm" type='confirm' icon={{name:'genderless'}} value={this.props.password} onChange={this._onChange} />
+                </Grid.Row>
+                <Grid.Row>
+                    <Button title="register" kind='danger' icon={Rocket} />
                 </Grid.Row>
             </Grid>
         );

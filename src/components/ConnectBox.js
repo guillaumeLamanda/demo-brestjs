@@ -9,15 +9,13 @@ const ConnectBox = (props) => {
 
     const panes = [
         {menuItem: 'Login', render:()=> <Login /> },
-        {menuItem: 'Register', render:()=> <Register dark />}
+        {menuItem: 'Register', render:()=> <Register />}
     ]
 
     return(
         <Card>
         <Card.Content>
-          <Card.Description>
-              <Tab panes={panes} />
-          </Card.Description>
+            <Tab panes={panes} />
         </Card.Content>
       </Card>
     )
