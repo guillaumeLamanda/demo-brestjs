@@ -38,7 +38,7 @@ export default class Login extends React.Component {
                     <Input name="confirm" placeholder="confirm" type='confirm' icon={{name:'genderless'}} value={this.props.password} onChange={this._onChange} />
                 </Grid.Row>
                 <Grid.Row>
-                    <Button title="register" kind='danger' icon={Rocket} />
+                    <Button title="register" kind='danger' icon={Rocket} onClick={()=>this.props.fRegister(login, password)} />
                 </Grid.Row>
             </Grid>
         );

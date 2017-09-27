@@ -1,28 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Button extends React.Component {
-
-    render = () => (
-        <div style={{display:"flex", justifyContent:"center"}}>
-            <button onClick={this.props.onClick} style={ Object.assign(styles.base, styles[this.props.kind])} > 
-                {
-                    this.props.icon ? 
-                        <this.props.icon size={30} />
-                    : null
-                }
-                { this.props.icon ? ' ' : null }
-                { this.props.title.toUpperCase() }
-            </button>
-        </div>
-    )
-}
+const Button = (props) => (
+    <div style={{display:"flex", justifyContent:"center"}}>
+        <button onClick={props.onClick} style={ Object.assign(styles.base, styles[props.kind])} > 
+            {
+                props.icon ? 
+                    <props.icon size={30} />
+                : null
+            }
+            { props.icon ? ' ' : null }
+            { props.title.toUpperCase() }
+        </button>
+    </div>
+)
 
 Button.propTypes = {
     title: PropTypes.string,
     kind: PropTypes.oneOf(['primary', 'secondary', 'danger']).isRequired,
-    onClick: PropTypes.func.isRequired,
+    onClick: PropTypes.func,
     icon: PropTypes.func
+}
+
+Button.defaultProps = {
+    kind: 'primary'
 }
 
 const styles = {
