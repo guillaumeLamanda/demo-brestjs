@@ -19,6 +19,8 @@
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.6",
+    "@storybook/addon-console": "^1.0.0",
+    "@storybook/addon-info": "^3.2.10",
     "@storybook/addon-links": "^3.2.6",
     "@storybook/react": "^3.2.8"
   }
