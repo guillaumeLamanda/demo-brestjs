@@ -29,7 +29,7 @@ export default class Login extends React.Component {
         return (
             <Grid style={{ backgroundColor: bColor, margin:0, justifyContent:'center'}}>
                 <Grid.Row>
-                    <Input name="login" placeholder="Login | email" icon={{name:'at'}} value={this.props.login} onChange={this._onChange}/>
+                    <Input name="login" placeholder="login | email" icon={{name:'at'}} value={this.props.login} onChange={this._onChange}/>
                 </Grid.Row>
                 <Grid.Row>
                     <Input name="password" placeholder="password" type='password' icon={{name:'genderless'}} value={this.props.password} onChange={this._onChange} />
