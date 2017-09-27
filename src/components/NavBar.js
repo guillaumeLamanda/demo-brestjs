@@ -19,13 +19,12 @@ export default class Navbar extends Component {
             <Menu.Item name='conferences' active={activeItem === 'conferences'} onClick={this.handleItemClick} />
             <Menu.Item name='jobs' active={activeItem === 'jobs'} onClick={this.handleItemClick} />
             <Menu.Menu position='right'>
-                <Menu.Item icon={{name:'user', size:'big', color:'yellow'}} onClick={()=>{}} />
+                <Modal size='mini' trigger={<Menu.Item icon={{name:'user', size:'big', color:'yellow'}} onClick={()=>this.setState({isOpen:true})} />} > 
+                    <Modal.Content>
+                        <ConnectBox />
+                    </Modal.Content>
+                </Modal>
             </Menu.Menu>
-            <Modal size='mini' open={this.state.isOpen}>
-                <Modal.Content>
-                    <ConnectBox />
-                </Modal.Content>
-            </Modal>
         </Menu>
     )
   }
