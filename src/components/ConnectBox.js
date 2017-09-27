@@ -14,11 +14,7 @@ class ConnectBox extends React.Component {
         ]
     
         return(
-            <Card>
-            <Card.Content>
-                <Tab panes={panes} />
-            </Card.Content>
-          </Card>
+            <Tab panes={panes} />
         )
     }
 }
