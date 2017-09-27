@@ -27,6 +27,7 @@ export default class Login extends React.Component {
     }
 
     _handleClick = () => {
+        if(this.state.login==='' && this.state.password==='') return this.setState({loginError:true, passwordError:true});
         if(this.state.login===''){
             return this.setState({loginError:true});
         }
@@ -63,7 +64,6 @@ export default class Login extends React.Component {
 
 Login.propTypes={
     fLogin: PropTypes.func,
-
     loginText: PropTypes.string,
 }
 
