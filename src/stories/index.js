@@ -16,7 +16,7 @@ import NavBar from '../components/NavBar';
 // icons
 import Beer from 'react-icons/lib/ti/beer';
 
-import {fLogin} from './testFunctions';
+import {fLogin, user} from './testFunctions';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button', 'with some emoji')} />);
 
@@ -30,7 +30,7 @@ storiesOf('BrestJS', module)
   .add('Connect box', ()=>( <ConnectBox login={fLogin} register={fLogin} /> ))
   .add('Login', ()=>( <Login /> ))
   .add('Register', ()=>( <Register /> ))
-  .add('Nav', ()=>( <NavBar /> ))
+  .add('Nav', ()=>( <NavBar user={null} /> ))
   
 storiesOf('B Button', module)
   .add('primary', 
@@ -51,4 +51,5 @@ storiesOf('Connect', module)
   ) 
 
 storiesOf('Nav', module)
-  .add('Nav', ()=>( <NavBar /> ))
+  .add('Nav', ()=>( <NavBar user={null} /> ))
+  .add('Nav logged', ()=>( <NavBar user={user} /> ))
